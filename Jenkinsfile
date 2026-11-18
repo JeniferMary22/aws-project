@@ -3,9 +3,9 @@ pipeline {
     agent any
 
     environment {
-        APP_NAME = 'docker-server'
-        IMAGE_NAME = 'jenifermary/docker-server'
-        CONTAINER_NAME = 'docker-hub-server'
+        APP_NAME = 'aws-project'
+        IMAGE_NAME = 'jenifermary/aws-project'
+        CONTAINER_NAME = 'aws-file'
         HOST_PORT = '8081'
     }
 
@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/JeniferMary22/Docker-server.git'
+                    url: 'https://github.com/JeniferMary22/aws-project.git'
             }
         }
 
